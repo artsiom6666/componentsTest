@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://guavapayltd--devartem.sandbox.my.site.com/lightning/lightning.out.js"></script>
+
+<div data-lighting-out="true"></div>
+
+<script>
+    const appName = 'c:LeadOutFormWrap';
+    const componentName = 'c:webLeadForm';
+    const lightningEndpoint = 'https://guavapayltd--devartem.sandbox.my.site.com';
+    const targetElement = document.querySelector('[data-lighting-out="true"]');
+    const componentAttributes = {
+
+    }
+
+    $Lightning.use(
+        appName,
+        function () {
+            $Lightning.createComponent(
+                componentName,
+                componentAttributes,
+                targetElement,
+                function (cmp) {
+                    console.log('component created');
+                }
+            );
+        },
+        lightningEndpoint
+    )
+</script>
+</html>
